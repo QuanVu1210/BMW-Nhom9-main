@@ -1,0 +1,149 @@
+<!-- HEADER -->
+{% load static %}
+<header>
+	<div class="messages">
+		{% if messages %}
+		{% for message in messages %}
+		<div class="alert alert-{{message.tags}}" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="True">&times;</span>
+			  </button>
+			{{ message|safe }}
+		</div>
+		{% endfor %}
+		{% endif %}
+	</div>
+	<!-- top Header -->
+	<div id="top-header">
+		<div class="container">
+			<div class="pull-left">
+				<span>CODOCTER - Nhà thuốc tiện lợi</span>
+			</div>
+			<div class="pull-right">
+				<ul class="header-top-links">
+
+
+					<li><a href="/faq">Hỏi đáp</a></li>
+
+					<li class="dropdown default-dropdown">
+						<aclass="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">VND <i
+								class="fa fa-caret-down"></i></a>
+						<ul class="custom-menu">
+							<li><a href="#">VND (Đ)</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /top Header -->
+
+	<!-- header -->
+	<div id="header" style="background-color: #0f62f9;">
+		<div class="container">
+			<div class="pull-left">
+				<!-- Logo -->
+				<div class="header-logo">
+					<a class="logo" href="#">
+						<img src="{% static '' %}img/235lgo.png" alt="">
+					</a>
+				</div>
+				<!-- /Logo -->
+				<script>
+					$(function () {
+						$("#query").autocomplete({
+							source: "/search_auto/",
+							select: function (event, ui) { //item selected
+								AutoCompleteSelectHandler(event, ui)
+							},
+							minLength: 2,
+						});
+					});
+					function AutoCompleteSelectHandler(event, ui) {
+						var selectedObj = ui.item;
+					}
+				</script>
+
+				<!-- Search -->
+				<div class="header-search">
+					<form action="/search/" method="post" style="width: 600px; background-color: #fff;">
+						{% csrf_token %}
+						<input id="query" name="query" class="input search-input" type="text"
+							placeholder="Tìm kiếm trên CoDocter">
+						<select name="catid" class="input search-categories">
+							<option value="0">Tất cả</option>
+							{% load mptt_tags %}
+							{% recursetree category %}
+							{% if node.is_leaf_node %}
+							<option value="{{node.id}}">{{node.title}}</option>
+							{% endif %}
+							{% if not node.is_leaf_node %}
+							<optgroup label="{{node.title}}">{{children}}</optgroup>
+							{% endif %}
+							{% endrecursetree %}
+						</select>
+						<button class="search-btn"><i
+								class="fa fa-search"></i></button>
+					</form>
+				</div>
+				<!-- /Search -->
+			</div>
+			<div class="pull-right">
+				<ul class="header-btns">
+					<!-- Account -->
+					<li class="header-account dropdown default-dropdown" id="a-header">
+						{% if user.id is not None %}
+						<div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
+							<div class="header-btns-icon" style="background-color: #0f62f9;">
+								<img src="{{ request.session.userimage }}"
+									style="height: 40px; border-radius: 30%;width:40px">
+							</div>
+							<strong class="text-uppercase" id="a-header">{{ user.username }} <i class="fa fa-caret-down"></i></strong>
+						</div>
+						{% else %}
+						<a href="/login" class="text-uppercase" id="a-header">Đăng nhập</a> | <a href="/signup"
+							class="text-uppercase" id="a-header">Đăng ký</a>
+						{% endif %}
+						<ul class="custom-menu">
+							<li><a href="/user"><i class="fa fa-user-o"></i> Tài Khoản</a></li>
+							<li><a href="/user/orders"><i class="fa fa-exchange"></i> Đơn hàng</a></li>
+							<li><a href="/user/comments"><i class="fa fa-check"></i> Bình luận</a></li>
+							<li><a href="/logout"><i class="fa fa-unlock-alt"></i> Đăng xuất</a></li>
+
+						</ul>
+					</li>
+					<!-- /Account -->
+
+					<!-- Cart -->
+
+					<li class="header-cart dropdown default-dropdown">
+						<a href="/shopcart/">
+							<div class="header-btns-icon"
+								style="background-color: #fff; border-radius: 10px;">
+								<i class="fa fa-shopping-cart"></i>
+
+								<span class="qty">
+								</span>
+							</div>
+							<strong class="text-uppercase" id="a-header">Giỏ hàng</strong>
+							<br>
+
+							<spa id="a-header"n>VND</span>
+						</a>
+
+					</li>
+					<!-- /Cart -->
+
+					<!-- Mobile nav toggle-->
+					<li class="nav-toggle">
+						<button class="nav-toggle-btn main-btn icon-btn"><i class="fa fa-bars"></i></button>
+					</li>
+					<!-- / Mobile nav toggle -->
+				</ul>
+			</div>
+		</div>
+		<!-- header -->
+	</div>
+	<!-- container -->
+</header>
+<!-- /HEADER -->

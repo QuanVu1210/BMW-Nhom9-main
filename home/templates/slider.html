@@ -1,0 +1,32 @@
+<!-- HOME -->
+{% load static %}
+	<div id="home">
+		<!-- container -->
+		<div class="container">
+			<!-- home wrap -->
+			<div class="home-wrap">
+				<!-- home slick -->
+				<div id="home-slick">
+
+					{% for rs in products_slider %}
+					<!-- banner -->
+
+					<div class="banner banner-1">
+						<a href="/product/{{ rs.id }}/{{rs.slug}}"><center><img  src="{{rs.image.url}}" alt=""  style="height: 410px; vertical-align: middle;"></center></a>
+						
+
+
+					</div>
+
+					<!-- /banner -->
+					{% endfor %}
+
+
+				</div>
+				<!-- /home slick -->
+			</div>
+			<!-- /home wrap -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /HOME -->

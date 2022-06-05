@@ -1,0 +1,73 @@
+{% extends 'homebase.html' %}
+{% load static %}
+{% block title %} User Login {{ setting.title }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/login_form.css' %}">{% endblock %}
+{% block sidebar %} {% include 'sidebar.html' %} {% endblock %}
+{% block body %}
+
+<!-- BREADCRUMB -->
+<div id="breadcrumb">
+	<div class="container">
+		<ul class="breadcrumb">
+			<li><a href="">Home</a></li>
+			<li class="active">User Login</li>
+		</ul>
+	</div>
+</div>
+<!-- /BREADCRUMB -->
+
+<!-- section -->
+<div class="section">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<div class="col-md-12">
+				<div class="billing-details">
+
+					<div class="section-title">
+						<h3 class="title">Đăng nhập</h3>
+					</div>
+
+					{% if messages %}
+					{% for message in messages %}
+					<div class="alert alert-{{message.tags}}" role="alert">
+						{{ message }}
+					</div>
+					{% endfor %}
+					{% endif %}
+
+					<div class="d-flex justify-content-center">
+						<div class="wrapper">
+							<div class="title">Chào mừng đến với CoDocter. Đăng nhập ngay!</div>
+							<form action="" method="post">
+								{% csrf_token %}
+								<p style="font-size: 16px; font-weight:bold;">Tên đăng nhập</p>
+								<div class="field">
+									<input class="input" type="text" name="username" required placeholder="Vui lòng nhập tên đăng nhập của bạn"/>
+									
+								</div>
+								<p style="font-size: 16px; font-weight:bold; padding-top: 20px;">Mật khẩu</p>
+								<div class="field">
+									<input class="input" type="password" name="password" required placeholder="Vui lòng nhập mật khẩu của bạn"/>
+								</div>
+								<div class="field" style="margin-top: 30px;">
+									<input id="btn" type="submit" value="Đăng nhập" />
+								</div>
+								<p style="font-size: 16px; padding-top: 20px; text-align: center;">Thành viên mới? Đăng ký <a href="/signup">tại đây</a></p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+</div>
+<!-- /section -->
+
+{% endblock %}

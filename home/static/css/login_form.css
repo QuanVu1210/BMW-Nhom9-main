@@ -1,0 +1,61 @@
+.wrapper{
+  width: 650px;
+  margin: auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  padding-left: 30px;
+  
+  font-size: 23px;
+  margin-top: 20px;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  color: rgb(75, 75, 75);
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+}
+.wrapper form{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+}
+.wrapper form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+  position: relative;
+}
+.wrapper form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+#btn{
+  background-color: #4158d0;
+  color: #FFF;
+  -webkit-box-shadow: 0px 0px 0px 1px #DADADA inset, 0px 0px 0px 6px transparent;
+  box-shadow: 0px 0px 0px 1px #DADADA inset, 0px 0px 0px 6px transparent;
+}
+#btn:hover, #btn:focus {
+  background-color: #0d009e;
+  -webkit-box-shadow: 0px 0px 0px 1px #349dff inset, 0px 0px 0px 0px #349dff;
+  box-shadow: 0px 0px 0px 1px #349dff inset, 0px 0px 0px 0px #349dff;
+}
+.wrapper form .field label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}

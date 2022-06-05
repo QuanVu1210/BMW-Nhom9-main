@@ -1,0 +1,226 @@
+{% extends 'homebase.html' %}
+
+{% block title %} Sản phẩm theo loại {{ setting.title }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+
+{% block sidebar %} {% include 'sidebar.html' %} {% endblock %}
+{% block body %}
+
+<!-- BREADCRUMB -->
+<div id="breadcrumb">
+	<div class="container">
+		<ul class="breadcrumb">
+			<li><a href="">Trang chủ</a></li>
+			<li class="active">Sản phẩm</li>
+		</ul>
+	</div>
+</div>
+<!-- /BREADCRUMB -->
+
+<!-- section -->
+<div class="section">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- ASIDE -->
+			<div id="aside" class="col-md-3">
+				<!-- aside widget -->
+
+				<!-- /aside widget -->
+
+				<div class="aside">
+					<h3 class="aside-title">Sản phẩm khác</h3>
+					<!-- widget product -->
+					{% for rs in products_mo %}
+					<div class="product product-widget">
+						<div class="product-thumb">
+							<a href="/product/{{ rs.id }}/{{rs.slug}}">
+								<img src="{{ rs.image.url }}" alt=""
+									style="height: 60px; width: 60px; object-fit: contain;">
+							</a>
+						</div>
+						<div class="product-body">
+							<h2 class="product-name"><a href="#">{{ rs.title }}</a></h2>
+							<h3 class="product-price">{{rs.price}} VND <del class="product-old-price"></del></h3>
+							<div class="product-rating">
+								<i class="fa fa-star{% if rs.avaregereview < 1%}-o empty{% endif%}"
+									style="color:#34c5ff"></i>
+								<i class="fa fa-star{% if rs.avaregereview < 2%}-o empty{% endif%}"
+									style="color:#34c5ff"></i>
+								<i class="fa fa-star{% if rs.avaregereview < 3%}-o empty{% endif%}"
+									style="color:#34c5ff"></i>
+								<i class="fa fa-star{% if rs.avaregereview < 4%}-o empty{% endif%}"
+									style="color:#34c5ff"></i>
+								<i class="fa fa-star{% if rs.avaregereview < 5%}-o empty{% endif%}"
+									style="color:#34c5ff"></i>
+								{{ rs.avaregereview}}/{{ rs.countreview}}
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+
+				</div>
+				<!-- aside widget 
+				<div class="aside">
+					<h3 class="aside-title">Theo giá</h3>
+					<div id="price-slider"></div>
+				</div>
+				 aside widget -->
+
+				<!-- aside widget 
+				<div class="aside">
+					<h3 class="aside-title">Theo màu:</h3>
+					<ul class="color-option">
+						<li><a href="#" style="background-color:#475984;"></a></li>
+						<li><a href="#" style="background-color:#8A2454;"></a></li>
+						<li class="active"><a href="#" style="background-color:#BF6989;"></a></li>
+						<li><a href="#" style="background-color:#9A54D8;"></a></li>
+						<li><a href="#" style="background-color:#675F52;"></a></li>
+						<li><a href="#" style="background-color:#050505;"></a></li>
+						<li><a href="#" style="background-color:#D5B47B;"></a></li>
+					</ul>
+				</div>
+				 /aside widget -->
+
+				<!-- aside widget 
+				<div class="aside">
+					<h3 class="aside-title">Theo size:</h3>
+					<ul class="size-option">
+						<li class="active"><a href="#">S</a></li>
+						<li class="active"><a href="#">XL</a></li>
+						<li><a href="#">L</a></li>
+					</ul>
+				</div>
+
+
+				 aside widget -->
+
+				<!-- /aside widget -->
+			</div>
+			<!-- /ASIDE -->
+
+			<!-- MAIN -->
+			<div id="main" class="col-md-9">
+				<!-- store top filter -->
+				<div class="store-filter clearfix">
+					<div class="pull-left">
+						<div class="row-filter">
+							<a href="#"><i class="fa fa-th-large"></i></a>
+							<a href="#" class="active"><i class="fa fa-bars"></i></a>
+						</div>
+						<div class="sort-filter">
+							<span class="text-uppercase">Sắp xếp:</span>
+							<select class="input" style="margin-left: 5px; width: 141px">
+								<option value="0">Tên sản phẩm</option>
+								<option value="0">Giá</option>
+								<option value="0">Đánh giá</option>
+							</select>
+							<a href="#" class="main-btn icon-btn"><i class="fa fa-arrow-down"></i></a>
+						</div>
+					</div>
+					<div class="pull-right">
+						<div class="page-filter">
+							<span class="text-uppercase">Xem:</span>
+							<select class="input">
+								<option value="0">10</option>
+								<option value="1">20</option>
+								<option value="2">30</option>
+							</select>
+						</div>
+						<ul class="store-pages">
+							<li><span class="text-uppercase">Trang:</span></li>
+							<li class="active">1</li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#"><i class="fa fa-caret-right"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /store top filter -->
+
+				<!-- STORE -->
+				<div id="store">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="order-summary clearfix">
+								<div class="section-title">
+									<h3 class="title">Danh sách sản phẩm</h3>
+								</div>
+								<table class="shopping-cart-table table">
+
+									<tbody>
+
+										{% for rs in products %}
+										<div class="col-md-4 col-sm-6 col-xs-6">
+											<div class="product product-single">
+												<div class="product-thumb">
+													<a href="/product/{{ rs.id }}/{{rs.slug}}"
+														class="main-btn quick-view"><i class="fa fa-search-plus"></i>
+														Xem ngay</a>
+													<img src="{{ rs.image.url }}" alt=""
+														style="height: 260px; width: 260px; object-fit: cover;">
+												</div>
+												<div class="product-body">
+													<h3 class="product-price" style="color:#1b53ad;">{{ rs.price}} VND </h3>
+													<div class="product-rating">
+														<i class="fa fa-star{% if rs.avaregereview < 1%}-o empty{% endif%}"
+															style="color:#34c5ff"></i>
+														<i class="fa fa-star{% if rs.avaregereview < 2%}-o empty{% endif%}"
+															style="color:#34c5ff"></i>
+														<i class="fa fa-star{% if rs.avaregereview < 3%}-o empty{% endif%}"
+															style="color:#34c5ff"></i>
+														<i class="fa fa-star{% if rs.avaregereview < 4%}-o empty{% endif%}"
+															style="color:#34c5ff"></i>
+														<i class="fa fa-star{% if rs.avaregereview < 5%}-o empty{% endif%}"
+															style="color:#34c5ff"></i>
+														{{ rs.avaregereview}}/{{ rs.countreview}}
+
+													</div>
+													<h2 class="product-name"><a href="#">{{ rs.title }}</a></h2>
+													<div class="product-btns">
+														<button class="main-btn icon-btn"><i
+																class="fa fa-heart"></i></button>
+														<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+														{% if rs.variant == 'None'%}
+														<a href="/order/addtoshopcart/{{rs.id}}"
+															class="primary-btn add-to-cart" style="font-size: 12px;"><i
+																class="fa fa-shopping-cart"></i> THÊM VÀO GIỎ</a>
+														{% else %}
+														<a href="/product/{{rs.id}}/{{rs.slug}}"
+															class="primary-btn add-to-cart"><i
+																class="fa fa-shopping-cart"></i> Chi tiết</a>
+														{% endif %}
+													</div>
+												</div>
+											</div>
+										</div>
+										{% endfor %}
+
+									</tbody>
+
+								</table>
+
+							</div>
+
+						</div>
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /STORE -->
+
+				<!-- store bottom filter -->
+
+				<!-- /store bottom filter -->
+			</div>
+			<!-- /MAIN -->
+		</div>
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+</div>
+<!-- /section -->
+
+{% endblock %}
