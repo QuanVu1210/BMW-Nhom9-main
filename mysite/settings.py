@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1","https://a084742fa316491c8c78564efcbce9e0-540abcbb-vm-80.vlab2.uit.edu.vn"]
 
 # Application definition
 

@@ -35,11 +35,12 @@ def index(request):
     return render(request,'index.html',context)
 
 
-def about(request):
+def covid(request):
     category = Category.objects.all()
     setting=Setting.objects.get(pk=1)
-    context={'setting':setting,'category': category}
-    return render(request,'about.html',context)
+    products_picked = Product.objects.all().order_by('?')[:4]
+    context={'setting':setting,'category': category,'products_picked': products_picked,}
+    return render(request,'covid.html',context)
 
 def contactus(request):
     category = Category.objects.all()

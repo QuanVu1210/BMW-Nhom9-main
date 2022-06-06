@@ -45,11 +45,12 @@ Table OF Contents
 ------ Product details
 ------ Product tab
 9 > CHECKOUT PAGE
-10 > FOOTER
-11 > SLICK
+10 > COVID PAGE
+11 > FOOTER
+12 > SLICK
 ------ Arrows
 ------ Dots
-12 > RESPONSIVE
+13 > RESPONSIVE
 ------------------------------------*/
 
 /*=========================================================
@@ -1598,9 +1599,46 @@ textarea.input {
   font-size: 24px;
   color: #349dff;
 }
+/*=========================================================
+	10 -> COVID PAGE
+===========================================================*/
+
+#showcase{
+  background-image: url(../img/banner-big.jpg);
+  color: #fff;
+  background-position: center left;
+  min-height: 450px;
+  margin-bottom: 30px;
+}
+
+#icon-covid-19{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.title-head{
+  text-align: center;
+  
+}
+
+.title-head a {
+  color: #4c4c4c;
+  -webkit-transition: 0.3s color;
+  transition: 0.3s color;
+}
+
+.title-head a:hover, .title-head a:focus {
+  color: #349dff;
+  text-decoration: none;
+  outline: none;
+}
+
+.icon {
+  margin-bottom: 10px;
+}
 
 /*=========================================================
-	10 -> FOOTER
+	11 -> FOOTER
 ===========================================================*/
 
 .footer {
@@ -1643,7 +1681,7 @@ textarea.input {
 }
 
 /*=========================================================
-	11 -> SLICK
+	12 -> SLICK
 ===========================================================*/
 
 /*----------------------------*\
@@ -1711,7 +1749,7 @@ color:#349dff;
 }
 
 /*=========================================================
-	12 -> RESPONSIVE
+	13 -> RESPONSIVE
 ===========================================================*/
 
 @media only screen and (max-width: 991px) {
@@ -1743,3 +1781,4 @@ color:#349dff;
     width: 100%;
   }
 }
+

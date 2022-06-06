@@ -1,0 +1,297 @@
+{% extends 'homebase.html' %}
+{% load static %}
+{% block title %} About Us- {{ setting.title }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+
+{% block sidebar %} {% include 'sidebar.html' %} {% endblock %}
+{% block body %}
+
+<!-- BREADCRUMB -->
+<div id="breadcrumb">
+	<div class="container">
+		<ul class="breadcrumb">
+			<li><a href="">Home</a></li>
+			<li class="active">Chuyên mục COVID-19</li>
+		</ul>
+	</div>
+</div>
+<!-- /BREADCRUMB -->
+<!-- container -->
+
+<div class="container">
+	<!-- section -->
+	<section id="showcase">
+	</section>
+	<section class="row" id="icon-covid-19">
+		<div class="col-sm-3">
+			<center>
+				<div class="icon">
+					<figure><img src="{% static 'img/icon-1.png' %}" alt="[object Object]"></figure>
+				</div>
+			</center>
+			<div class="title-head">
+				<h4><a href="#trieuchung" data-toggle="collapse">
+						<p style="font-size: 22px;">Triệu chứng <br> COVID-19</p>
+					</a> </h4>
+			</div>
+		</div>
+
+		<div class="col-sm-3">
+			<center>
+				<div class="icon">
+					<figure><img src="{% static 'img/icon-2.png' %}" alt="[object Object]"></figure>
+				</div>
+			</center>
+			<div class="title-head">
+				<h4><a href="#benhnhan" data-toggle="collapse">
+						<p style="font-size: 22px;">Bệnh nhân <br> COVID-19</p>
+					</a> </h4>
+			</div>
+		</div>
+
+		<div class="col-sm-3">
+			<center>
+				<div class="icon">
+					<figure><img src="{% static 'img/icon-3.png' %}" alt="[object Object]"></figure>
+				</div>
+			</center>
+			<div class="title-head">
+				<h4><a href="#chamsoc" data-toggle="collapse">
+						<p style="font-size: 22px;">Chăm sóc <br> bệnh nhân COVID-19</p>
+					</a> </h4>
+			</div>
+		</div>
+
+		<div class="col-sm-3">
+			<center>
+				<div class="icon">
+					<figure><img src="{% static 'img/icon-4.png' %}" alt="[object Object]"></figure>
+				</div>
+			</center>
+			<div class="title-head">
+				<h4><a href="#dieutri" data-toggle="collapse">
+						<p style="font-size: 22px;">Thuốc điều trị <br> COVID-19</p>
+					</a> </h4>
+			</div>
+		</div>
+	</section>
+	<!-- /section -->
+
+	<section>
+		<div id="trieuchung" class="collapse">
+			<img src="{% static 'img/trieuchung1.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/trieuchung2.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/trieuchung3.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/trieuchung4.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/trieuchung5.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/trieuchung6.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/trieuchung7.png' %}" alt="" style="width: 100%; margin-bottom: 20px;">
+		</div>
+		<div id="benhnhan" class="collapse">
+			<img src="{% static 'img/benhnhan1.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/benhnhan2.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/benhnhan3.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/benhnhan4.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/benhnhan5.png' %}" alt="" style="width: 100%; margin-bottom: 20px;">
+		</div>
+		<div id="chamsoc" class="collapse">
+			<img src="{% static 'img/chamsoc1.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/chamsoc2.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/chamsoc3.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/chamsoc4.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/chamsoc5.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/chamsoc6.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/chamsoc7.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/chamsoc8.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/chamsoc9.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/chamsoc10.png' %}" alt="" style="width: 100%; margin-bottom: 20px;">
+		</div>
+		<div id="dieutri" class="collapse">
+			<img src="{% static 'img/dieutri1.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/dieutri2.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/dieutri3.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/dieutri4.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/dieutri5.png' %}" alt="" style="width: 100%;">
+			<img src="{% static 'img/dieutri6.png' %}" alt="" style="width: 100%; margin-bottom: 20px;">
+		</div>
+	</section>
+	
+	<!-- section -->
+	<section>
+		<div style="background-color: #54a64a; border-radius: 20px; text-align: center;">
+			<h2 style="padding-top: 10px; padding-bottom: 10px; color: #fff;">NHỮNG CÂU HỎI THƯỜNG GẶP</h2>
+		</div>
+		<div class="container" style="padding-left: 10%; padding-right: 10%;">
+			<a href="#demo1" data-toggle="collapse">
+				<div class="section-title">
+					<h4>Làm gì khi phát hiện mắc COVID-19?</h4>
+				</div>
+			</a>
+			<div id="demo1" class="collapse">
+				<p style="font-size: 16px; margin-bottom: 20px;">Khi phát hiện mắc COVID-19, người bệnh nên ở nhà và
+					cách ly với mọi người trong
+					gia đình, đeo khẩu trang
+					và tránh tiếp xúc với người xung quanh, đặc biệt là nhóm người có nguy cơ cao. Thường xuyên rửa tay
+					bằng
+					nước rửa tay diệt khuẩn. Theo dõi triệu chứng và điều trị theo hướng dẫn cho đến khi khỏi hoàn toàn
+					COVID-19.</p>
+			</div>
+			<div href="#demo2" data-toggle="collapse">
+				<div class="section-title">
+					<h4>COVID-19 có thể lây lan từ thú cưng hay động vật sang người không?</h4>
+				</div>
+			</div>
+			<div id="demo2" class="collapse">
+				<p style="font-size: 16px; margin-bottom: 20px;">Dựa trên thông tin thu được ở thời điểm hiện tại, nguy
+					cơ
+					động vật lây lan COVID-19 cho con người
+					được coi là thấp.</p>
+			</div>
+			<div href="#demo3" data-toggle="collapse">
+				<div class="section-title">
+					<h4>COVID-19 có lây thể truyền qua đường không khí không?</h4>
+				</div>
+			</div>
+			<div id="demo3" class="collapse">
+				<p style="font-size: 16px; margin-bottom: 20px;">Virus cũng có khả năng lây truyền qua đường không khí
+					qua
+					khí dung (aerosol), đặc biệt tại các cơ sở
+					y tế và những nơi đông người và ở không gian kín.</p>
+			</div>
+			<div href="#demo4" data-toggle="collapse">
+				<div class="section-title">
+					<h4>Các triệu chứng khởi phát thường gặp khi nhiễm bệnh COVID-19 là gì?</h4>
+				</div>
+			</div>
+			<div id="demo4" class="collapse">
+				<p style="font-size: 16px; margin-bottom: 20px;">Triệu chứng khởi phát hay gặp là sốt, ho khan, mệt mỏi
+					và
+					đau cơ. Một số trường hợp đau họng, nghẹt
+					mũi, chảy nước mũi, đau đầu, ho có đờm, nôn và tiêu chảy.</p>
+			</div>
+			<div href="#demo5" data-toggle="collapse">
+				<div class="section-title">
+					<h4>Thời gian ủ bệnh COVID-19 là bao lâu?</h4>
+				</div>
+			</div>
+			<div id="demo5" class="collapse">
+				<p style="font-size: 16px; margin-bottom: 20px;">Hầu hết bệnh nhân có thời gian ủ bệnh kéo dài từ 2 đến
+					14
+					ngày, trung bình là 5 ngày.</p>
+			</div>
+			<div href="#demo6" data-toggle="collapse">
+				<div class="section-title">
+					<h4>Đối với phụ nữa có thai, COVID-19 có lây từ mẹ sang con không?</h4>
+				</div>
+			</div>
+			<div id="demo6" class="collapse">
+				<p style="font-size: 16px; margin-bottom: 20px;">Hiện chưa có bằng chứng khoa học chứng minh COVID-19 có
+					thể
+					lây từ mẹ sang con. Các mẹ bầu không nên
+					quá lo lắng, giữ tinh thần thoải mái, chăm sóc sức khỏe và thăm khám thai định kỳ theo chỉ định của
+					bác sĩ.</p>
+			</div>
+			<div href="#demo7" data-toggle="collapse">
+				<div class="section-title">
+					<h4>Người nhiễm biến thể Delta thường có những triệu chứng nào?</h4>
+				</div>
+			</div>
+			<div id="demo7" class="collapse">
+				<p style="font-size: 16px; margin-bottom: 20px;">Các triệu chứng ho và mất khứu giác ít xảy ra ở bệnh
+					nhân
+					mắc biến thể Delta. Thay vào đó, bệnh nhân
+					mắc biến thể Delta thường gặp những triệu chứng phổ biến bao gồm: Đau đầu, đau họng, sổ mũi, sốt.
+				</p>
+			</div>
+			<div href="#demo8" data-toggle="collapse">
+				<div class="section-title">
+					<h4>Hiện nay đã có thuốc điều trị COVID-19 chưa?</h4>
+				</div>
+			</div>
+			<div id="demo8" class="collapse">
+				<p style="font-size: 16px; margin-bottom: 20px;">Có 3 loại thuốc được cân nhắc và khuyến cáo sử dụng
+					điều
+					trị COVID-19 gồm thuốc kháng virus
+					Remdesivir 200mg, thuốc kháng virus Favipiravir 200mg và thuốc kháng virus Molnupiravir 400mg. Lưu
+					ý, người bệnh sử dụng thuốc phải tuân thủ chỉ định của bác sĩ, điều trị theo diễn biến bệnh lý.</p>
+			</div>
+			<div href="#demo9" data-toggle="collapse">
+				<div class="section-title">
+					<h4>Trẻ em mắc COVID-19 có nguy hiểm không?</h4>
+				</div>
+			</div>
+			<div id="demo9" class="collapse">
+				<p style="font-size: 16px; margin-bottom: 20px;">Trẻ mắc COVID-19 hầu hết không có triệu chứng hoặc thể
+					nhẹ.
+					Tuy nhiên, vẫn có 4% trường hợp diễn biến
+					nặng và nguy kịch là 0,5%. Vì vậy, khi chăm sóc trẻ cần chú ý theo dõi liên tục, liên hệ với y tế
+					hoặc bác sĩ hỗ trợ ngay khi nhận thấy các dấu hiệu chuyển nặng như: sốt trên 38 độ; tiêu chảy; trẻ
+					mệt, không chịu chơi; ăn/bú kém; chỉ số SpO2 dưới 96%,...</p>
+			</div>
+			<div href="#demo10" data-toggle="collapse">
+				<div class="section-title">
+					<h4>Người mắc COVID-19 ăn uống như thế nào?</h4>
+				</div>
+			</div>
+			<div id="demo10" class="collapse">
+				<p style="font-size: 16px; margin-bottom: 50px;">Theo hướng dẫn dinh dưỡng cho người nhiễm COVID-19 tại
+					nhà
+					của Bộ Y tế, người mắc COVID-19 cần được
+					cung cấp đầy đủ dinh dưỡng, không kiêng khem thực phẩm (trừ trường hợp dị ứng thực phẩm). Tuy nhiên
+					nên hạn chế ăn quá nhiều đồ ngọt và mặn.</p>
+			</div>
+		</div>
+	</section>
+	<!-- /section -->
+	<!-- section -->
+	<section>
+		<div style="background-color: #54a64a; border-radius: 20px; text-align: center;">
+			<h2 style="padding-top: 10px; padding-bottom: 10px; color: #fff;">BẢO VỆ GIA ĐÌNH MÙA COVID</h2>
+		</div>
+			{% for rs in products_picked %}
+			<!-- Product Single -->
+			<div class="col-md-3  col-sm-6 col-xs-6">
+				<div class="product product-single">
+					<div class="product-thumb">
+						<a href="/product/{{ rs.id }}/{{rs.slug}}" class="main-btn quick-view"><i class="fa fa-search-plus"></i> Xem ngay</a>
+						<img src="{{ rs.image.url }}" alt="" style="height: 260px;object-fit:cover;">
+					</div>
+					<div class="product-body">
+						<h3 class="product-price" style="color:#1b53ad;">{{ rs.price }} VND </h3>
+						<div class="product-rating">
+							<i class="fa fa-star{% if rs.avaregereview < 1%}-o empty{% endif%}"
+								style="color:#34c5ff"></i>
+							<i class="fa fa-star{% if rs.avaregereview < 2%}-o empty{% endif%}"
+								style="color:#34c5ff"></i>
+							<i class="fa fa-star{% if rs.avaregereview < 3%}-o empty{% endif%}"
+								style="color:#34c5ff"></i>
+							<i class="fa fa-star{% if rs.avaregereview < 4%}-o empty{% endif%}"
+								style="color:#34c5ff"></i>
+							<i class="fa fa-star{% if rs.avaregereview < 5%}-o empty{% endif%}"
+								style="color:#34c5ff"></i>
+							{{ rs.avaregereview}}/{{ rs.countreview}}
+						</div>
+						<h2 class="product-name"><a href="#">{{ rs.title }}</a></h2>
+						<div class="product-btns">
+							<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+							<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+							{% if rs.variant == 'None'%}
+							<a href="/order/addtoshopcart/{{rs.id}}" class="primary-btn add-to-cart"
+								style="font-size: 12px;"><i class="fa fa-shopping-cart"></i> THÊM VÀO GIỎ</a>
+							{% else %}
+							<a href="/product/{{rs.id}}/{{rs.slug}}" class="primary-btn add-to-cart"><i
+									class="fa fa-shopping-cart"></i> Chi tiết</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Product Single -->
+			{% endfor %}
+		</div>
+	</section>
+	<!-- /section -->
+</div>
+<!-- /container -->
+{% endblock %}

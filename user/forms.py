@@ -7,10 +7,10 @@ from user.models import UserProfile
 
 
 class SignUpForm(UserCreationForm):
-    username = forms.CharField(max_length=30,label= 'Tên đăng nhập')
-    email = forms.EmailField(max_length=200,label= 'Email')
-    first_name = forms.CharField(max_length=100, help_text='Họ',label= 'Họ')
-    last_name = forms.CharField(max_length=100, help_text='Nhập họ tên của bạn',label= 'Họ tên')
+    username = forms.CharField(max_length=30, help_text='Nhập tên đăng nhập của bạn', label= 'Tên đăng nhập')
+    email = forms.EmailField(max_length=200, help_text='Nhập email của bạn', label= 'Email')
+    first_name = forms.CharField(max_length=100, help_text='Nhập họ của bạn',label= 'Họ')
+    last_name = forms.CharField(max_length=100, help_text='Nhập tên của bạn',label= 'Họ tên')
 
     class Meta:
         model = User

@@ -27,7 +27,7 @@ from user import views as UserViews
 urlpatterns = [
     path('', include('home.urls')),
     path('home/', include('home.urls')),
-    path('about/', views.about,name='aboutus'),
+    path('covid-19/', views.covid,name='covid'),
     path('contact/', views.contactus,name='contactus'),
     path('product/', include('product.urls')),
     path('order/', include('order.urls')),
